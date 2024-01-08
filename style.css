@@ -1,0 +1,338 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navigation{
+  padding-top:30px;
+  padding-bottom:30px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+}
+
+.navbar-right{
+  float:right;
+  padding-right:10%;
+}
+
+.navbar-right a{
+  text-decoration:none;
+  padding:10px;
+  color: #fff;
+  font-family:Arial;
+  font-weight:900;
+}
+
+.navbar-right a:hover{
+  text-decoration:underline;
+}
+.navbar-logo{
+  padding-left:10%;
+  font-family:Arial;
+  font-size:30px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#fff; 
+}
+/* Hero Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+  
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button-wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.loader {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.loader .stroke {
+  display: block;
+  position: relative;
+  background: #f1f1f1;
+  height: 100%;
+  width: 3px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.2s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+.d-none {
+  display: none;
+}
+.unmute .stroke {
+  background: #f00;
+}
+.outter.hero-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
+
+.hero-video {
+  .video-container1 {
+    height: 720px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 767px) {
+      height: 325px;
+    }
+  }
+
+  video {
+    object-fit: cover;
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    top: 0;
+    left: 0;
+    @media (max-width: 767px) {
+      height: 325px;
+    }
+  }
+
+  .video-container:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(black, 0.2);
+    z-index: 1;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    padding: 0;
+    line-height: 1;
+    color: white;
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
+    @media (min-width: 768px) {
+      font-size: 52px;
+    }
+  }
+
+  .desc {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .callout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 70%;
+    margin: auto;
+    @media (max-width: 767px) {
+      width: 90%;
+    }
+  }
+
+  /* Common button styles */
+  .button {
+    float: left;
+    min-width: 150px;
+    max-width: 250px;
+    display: block;
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    background: none;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .button:focus {
+    outline: none;
+  }
+  .button > span {
+    vertical-align: middle;
+  }
+
+  /* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+  .bg-1 .button {
+    color: #37474f;
+    border-color: #37474f;
+  }
+  .bg-2 .button {
+    color: #eceff1;
+    border-color: #eceff1;
+  }
+  .bg-3 .button {
+    color: #fff;
+    border-color: #fff;
+  }
+
+  /* Sizes */
+  .button--size-s {
+    font-size: 14px;
+  }
+  .button--size-m {
+    font-size: 16px;
+  }
+  .button--size-l {
+    font-size: 18px;
+  }
+
+  /* Typography and Roundedness */
+  .button--text-upper {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .button--text-thin {
+    font-weight: 300;
+  }
+  .button--text-medium {
+    font-weight: 500;
+  }
+  .button--text-thick {
+    font-weight: 600;
+  }
+  .button--round-s {
+    border-radius: 5px;
+  }
+  .button--round-m {
+    border-radius: 15px;
+  }
+  .button--round-l {
+    border-radius: 40px;
+  }
+
+  /* Borders */
+  .button--border-thin {
+    border: 1px solid;
+  }
+  .button--border-medium {
+    border: 2px solid;
+  }
+  .button--border-thick {
+    border: 3px solid;
+  }
+  .button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color #fff;
+  }
+
+  /* wayra button */
+  .button--wayra {
+    overflow: hidden;
+    width: 245px;
+    -webkit-transition: border-color 0.3s, color 0.3s;
+    transition: border-color 0.3s, color 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    background-color: #fff;
+    color:#000;
+    border: none;
+  }
+  .button--wayra::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: #37474f;
+    z-index: -1;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s,
+      background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  }
+  .button--wayra:hover {
+    color: #fff;
+    border-color: #3f51b5;
+  }
+  .button--wayra.button--inverted:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+  .button--wayra:hover::before {
+    opacity: 1;
+    background-color: #3f51b5;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .button--wayra.button--inverted:hover::before {
+    background-color: #000;
+    color: #fff;
+  }
+}
